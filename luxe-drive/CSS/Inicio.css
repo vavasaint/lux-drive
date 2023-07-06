@@ -1,0 +1,388 @@
+#containerPages {
+    width: 100vw;
+    height: 72%;
+    min-height: 72vh;
+}
+
+.carousel {
+    background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(63, 62, 62, 0.747), rgb(202, 199, 199), rgba(0, 0, 0, 0.863));
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel img {
+    width: 500px;
+    height: 350px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-container img {
+    width: 320px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-controls {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-controls button>i{
+    font-size: 40px;
+    padding: 5px 10px;
+}
+
+.prev-button,
+.next-button {
+    background-color: transparent;
+    border: none;
+}
+
+button>i {
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.checkbox {
+    margin: 20px 0px 30px 40px
+}
+
+input[type="checkbox"] {
+    margin-left: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#containerBusqueda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    margin-right: 140px;
+}
+
+input[type="search"] {
+    width: 400px;
+    height: 35px;
+    border-bottom: solid rgb(255, 0, 0) 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+}
+
+.ceroResultado {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceroResultado img {
+    width: 600px;
+}
+
+.contenedorCarros {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.itemTarjeta img {
+    width: 260px;
+    transition: transform .6s;
+}
+
+.itemTarjeta img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(6px 6px 8px rgb(0, 0, 0));
+}
+
+.itemTarjeta {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 65px 70px 65px;
+}
+
+.itemTarjeta:hover {
+    background-color: rgba(102, 89, 89, 0.253);
+    border-radius: 30px 0px;
+}
+
+.itemTarjeta .botonCard {
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background: linear-gradient(gray, rgb(0, 0, 0));
+    color: white;
+}
+
+.itemTarjeta .botonCard:hover {
+    background: transparent;
+    color: black
+}
+
+.itemTarjeta a {
+    font-size: 12px;
+    text-decoration-line: none;
+    color: black;
+}
+
+.itemTarjeta a:hover {
+    text-decoration-line: underline;
+}
+
+.cotizacion {
+    border: none;
+    text-decoration-line: underline;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.cotizacion i {
+    font-size: 11px;
+    color: black;
+}
+
+.atCliente {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(gray, rgb(0, 0, 0));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.informacion:hover .contenedor {
+    transform: rotateY(180deg);
+}
+
+.imagenInfo,
+.tituloInfo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.tituloInfo {
+    width: 100%;
+    height: 110px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.informacion img {
+    width: 100%;
+    height: 295px;
+}
+
+.informacion .textoInfo {
+    width: 100%;
+    font-size: 14px;
+    text-align: justify;
+    color: white;
+}
+
+@media screen and (max-width: 690px) {
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    button>i {
+        font-size: 23px;
+    }
+
+    .carousel-controls button>i{
+        font-size: 25px;
+        padding: 5px;
+    }
+    
+
+    .carousel {
+        position: relative;
+        height: 22vh;
+        background-size: cover;
+    }
+
+    .carousel img {
+        width: 110px;
+        height: 100px;
+    }
+
+    .carousel-container img {
+        width: 120px;
+        height: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #containerBusqueda {
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .checkbox {
+        margin: 10px 0px;
+    }
+
+    .search {
+        margin: 10px 0px;
+    }
+
+    input[type="search"] {
+        width: 250px;
+    }
+
+    .itemTarjeta {
+        margin: 20px 65px 40px 65px;
+    }
+
+    .itemTarjeta img {
+        width: 160px;
+    }
+
+    .ceroResultado img {
+        width: 310px;
+    }
+
+    .atCliente {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .informacion {
+        width: 100%;
+        height: 240px;
+        margin: 30px 0px 60px 0px;
+    }
+
+    .informacion .textoInfo {
+        font-size: 14px;
+    }
+
+    .informacion img {
+        width: 100%;
+        height: 230px;
+    }
+}
+
+@media screen and (min-width: 690px) and (max-width: 1224px) {
+    .carousel {
+        position: relative;
+        height: 30vh;
+        background-size: cover;
+    }
+
+    .carousel img {
+        width: 330px;
+        height: 200px;
+    }
+
+    .carousel-container img {
+        width: 230px;
+        height: 180px;
+        margin-left: 50px;
+    }
+
+    #containerBusqueda {
+        flex-direction: column;
+    }
+
+    .checkbox {
+        margin: 15px 0px;
+    }
+
+    .search {
+        margin: 15px 0px;
+    }
+
+    .informacion {
+        width: 60%;
+        height: 340px;
+    }
+
+    .textoInfo {
+        width: 100%;
+    }
+
+    .atCliente {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .informacion img {
+        width: 100%;
+        height: 270px;
+    }
+}
